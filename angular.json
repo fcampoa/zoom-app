@@ -5,7 +5,11 @@
   "projects": {
     "meetingsdk-sample-angular": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -31,10 +35,9 @@
             "styles": [
               "node_modules/@zoomus/websdk/dist/css/bootstrap.css",
               "node_modules/@zoomus/websdk/dist/css/react-select.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-            ],
+            "scripts": [],
             "allowedCommonJsDependencies": [
               "@zoomus/websdk"
             ]
@@ -99,7 +102,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -130,6 +133,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "meetingsdk-sample-angular"
 }
